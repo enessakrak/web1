@@ -13,9 +13,7 @@ include('conn.php');
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
+  
     <title>Subvencije - admin page</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/">
@@ -126,19 +124,7 @@ include('conn.php');
 		<tr> 
 			 <td>Korisnik ID: </td> 
 			<td><input style="width:auto;" type="text"  name="korisniciID" size="80"  /></td>   
-		<?php 
-				/* if($stmt = $conn->query("SELECT * from korisnicisubvencija")){
-
-				echo "<select id=korisniciID naziv=naziv class='form-control' style='width:100px;'>";
-				while ($row = $stmt->fetch_assoc()) {
-				echo "<option value=$row[korisniciID]>$row[naziv]</option>";
-				}
-				echo "</select>";
-				}else{
-				echo $connection->error;
-				} */
-		?>
-		</tr>  
+		
 		<tr> 
 			<td>Tip ID: </td> 
 			<td><input style="width:auto;" type="text"  name="tipID" size="80" /></td>  
@@ -251,7 +237,7 @@ include('conn.php');
 		<td align="center" colspan="3"><input type="submit" class="btn btn-primary" value="Snimi novog korisnika" /></td> 
     </p>
 	<script>
-    // WRITE THE VALIDATION SCRIPT.
+   
     function isNumber(evt) {
         var iKeyCode = (evt.which) ? evt.which : evt.keyCode
         if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
@@ -267,10 +253,7 @@ include('conn.php');
    </table>
 	
 	 </center>
-	<!-- <p>
-		<td align="center" colspan="3"><input type="submit" class="btn btn-primary" value="Snimi novu subvenciju" /></td> 
-    </p>
--->
+	
   
  <h4><a href = "logout.php">Sign Out</a></h4>
   </br>
