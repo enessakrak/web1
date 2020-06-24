@@ -4,7 +4,7 @@
 	
 	
 	$query=mysqli_query($conn, "SELECT * FROM sub_zz ");
-	//LEFT JOIN korisnicisubvencija ON sub_zz.korisniciID=korisnicisubvencija.korisniciID where korisniciID='$korisniciID' ");
+	
 	
 	$row=mysqli_fetch_array($query);
 ?>
@@ -14,9 +14,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
+   
     <title>Subvencije - admin page</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/">
@@ -176,76 +174,8 @@
 			<td><input style="width:auto;" type="text"  name="unosPodataka" size="80" /></td>  
 		</tr> 
 		
-	 	<?php
-		/*
-			if(isset($_POST["submit"]))
-			{
-			 
-			 //Including dbconfig file.
-				include 'connect1.php';
-			 
-			 
-				$link=Connection();
-
-
-
-			$subID=$_POST["subID"];
-			$brojPredmeta=$_POST["brojPredmeta"];
-			$status=$_POST["status"];
-			$brojAkta=$_POST["brojAkta"];
-			$datum=$_POST["datum"];
-			$periodOd=$_POST["periodOd"];
-			$periodDo=$_POST["periodDo"];
-			$iznosDoprZap=$_POST["iznosDoprZap"];
-			$iznosDoprZdr=$_POST["iznosDoprZdr"];
-			$iznosUkupno=$_POST["iznosUkupno"];
-			$datumNaloga=$_POST["datumNaloga"];
-			$brojZahtjeva=$_POST["brojZahtjeva"];
-			$brojNaloga=$_POST["brojNaloga"];
-			$iznosNaloga=$_POST["iznosNaloga"];
-			$svrha=$_POST["svrha"];
-			$dostavljenIzvjestaj=$_POST["dostavljenIzvjestaj"];
-			$unosPodataka=$_POST["unosPodataka"];
-
-			//'".mysql_insert_id()."'
-
-				
-				
-			//$query=	"INSERT INTO `narudzba` ( `partnerID`,`status`,`userID`, `artikalID`,`kolicina`,`cijenaVP`,`primjenjeniRabat`,) 
-			//VALUES ( '".$partnerID."', '".$status."', '".$userID."', '".$artikalID."', '".$kolicina."', '".$cijenaVP."', '".$primjenjeniRabat."')"; 
-
-			//$result12 = mysql_query("INSERT INTO `narudzba` (`partnerID`,`status`,`userID`) VALUES ('".$partnerID."', '".$status."', '".$userID."')");
-			$result12 = mysql_query("INSERT INTO `sub_zz`(`subID`, `korisniciID`, `korisniciVer`, `brojPredmeta`, `status`, `brojAkta`, `datum`, `periodOd`, `periodDo`, 
-						  `iznosDoprZap`, `iznosDoprZdr`, `iznosUkupno`, `datumNaloga`, 
-						  `brojZahtjeva`, `brojNaloga`, `iznosNaloga`, `svrha`, `dostavljenIzvjestaj`, `unosPodataka`) 
-
-				VALUES ('$_POST[subID]', '$_POST[korisniciID]', '$_POST[korisniciVer]','$_POST[brojPredmeta]','$_POST[status]','$_POST[brojAkta]','$_POST[datum]','$_POST[periodOd]', '$_POST[periodDo]',
-						'$_POST[iznosDoprZap]','$_POST[iznosDoprZdr]','$_POST[iznosUkupno]','$_POST[datumNaloga]',
-						'$_POST[brojZahtjeva]','$_POST[brojNaloga]', '$_POST[iznosNaloga]','$_POST[svrha]','$_POST[dostavljenIzvjestaj]','$_POST[unosPodataka]')");
-
-			//$result12 = mysql_query("INSERT INTO `narudzbastavke`(`artikalID`, `kolicina`, `cijenaVP`, `primjenjeniRabat`) SELECT `narudzbaID` FROM `narudzba` WHERE narudzbaID = '".$narudzbaID."'");
-			//$result13= mysql_query("INSERT INTO narudzba (`partnerID`,`status`,`userID`)
-			//SELECT * from `narudzbastavke` as stavke,   
-			//FROM `narudzbastavke` INNER JOIN`narudzbastavke` ON `narudzbastavke`.`narudzbaID`= `narudzba`.`narudzbaID`");
-
-
-echo "Snimili ste podatke";
+	 	
 	
-mysql_query($result12,$link);
-	
-mysql_close($link);
-
-   	
-header("Location: http://192.168.104.120/tk/ver1/pregledSubvencijaZdravstvo.php"); 
- 
- 
-
-
-
-}
-*/
- ?> 
-		
 			 
 	<p>
 		<td align="center" colspan="3"><input type="submit" class="btn btn-primary" value="Snimi novu subvenciju" /></td> 
@@ -256,10 +186,7 @@ header("Location: http://192.168.104.120/tk/ver1/pregledSubvencijaZdravstvo.php"
    </table>
 	
 	 </center>
-	<!-- <p>
-		<td align="center" colspan="3"><input type="submit" class="btn btn-primary" value="Snimi novu subvenciju" /></td> 
-    </p>
--->
+	
   
 
   </br>
